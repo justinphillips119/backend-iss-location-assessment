@@ -31,7 +31,7 @@ def iss_map(latitude, longitude):
     iss.shape(iss_img)
     iss.setheading(90)
     iss.penup()
-    iss.goto(latitude, longitude)
+    iss.goto(longitude, latitude)
     return map
 
 def rise_time(latitude, longitude):
@@ -59,7 +59,7 @@ def main():
         location_pin = turtle.Turtle()
         location_pin.penup()
         location_pin.color("red")
-        location_pin.goto(indiana_latitude, indiana_longitude)
+        location_pin.goto(indiana_longitude, indiana_latitude)
         location_pin.dot(5)
         passover_time = rise_time(indiana_latitude, indiana_longitude)
         location_pin.write(passover_time)
